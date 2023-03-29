@@ -1,8 +1,4 @@
-#include <unistd.h>
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
 
 /**
  * len - length of a string
@@ -71,6 +67,7 @@ int _printf(const char *format, ...)
 		}
 	}
 
+	va_end(args);
 	return (length);
 
 }
