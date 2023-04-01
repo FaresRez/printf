@@ -3,14 +3,16 @@
 /**
  * print_int - prints integer
  * @num: int
- * Return: nothing
+ * Return: length of int
  */
 
-void print_int(int num)
+int print_int(int num)
 {
-	char str[12];/* Maximum length of 32-bit integer + 1 for null terminator */
+	char str[12];
 	int i = 0;
 	int is_negative = 0;
+	int length = 0;
+	int j = 0;
 
 	if (num < 0)
 	{
@@ -29,8 +31,9 @@ void print_int(int num)
 	}
 
 	str[i] = '\0';
+	length = i;
 
-	int j = i - 1;
+	j = i - 1;
 
 	i = 0;
 	while (i < j)
@@ -44,4 +47,6 @@ void print_int(int num)
 	}
 
 	write(STDOUT_FILENO, str, len(str));
+	return (length);
+
 }

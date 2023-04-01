@@ -5,6 +5,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 int _printf(const char *format, ...);
-void print_int(int num);
+int print_int(int num);
 int len(char *ch);
 #endif
