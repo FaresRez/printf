@@ -6,9 +6,9 @@
  * Return: length of int
  */
 
-int print_int(int num)
+int print_int(long int num)
 {
-	char str[12];
+	char str[21];
 	int i = 0;
 	int is_negative = 0;
 	int length = 0;

@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	char *value;
 	int length = 0;
 	va_list args;
-	int val;
+	long int val;
 	int len_int = 0;
 
 	va_start(args, format);
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 						break;
 					case 'd':
 					case 'i':
-						val = va_arg(args, int);
+						val = va_arg(args, long int);
 						len_int = print_int(val);
 						length += len_int;
 						break;
